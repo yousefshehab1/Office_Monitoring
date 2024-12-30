@@ -24,7 +24,7 @@ A Flask-based web application for monitoring office workspaces using computer vi
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/yousefshehab1/Office_Monitoring.git
 cd office-monitoring
 ```
 
