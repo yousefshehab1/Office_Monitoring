@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Camera</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #162447;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        h1 {
+            color: #e94560;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #e94560;
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e94560;
+            background-color: #1b1b2f;
+            color: white;
+            border-radius: 5px;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #ff5f7e;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #e94560;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #ff5f7e;
+        }
+        .btn:disabled {
+            background-color: #7d2a3c;
+            cursor: not-allowed;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1f4068;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>لوحة تحكم كاميرا المراقبة</h1>
+            <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="videoUpload" class="form-label">رفع الفيديو</label>
+                    <input type="file" class="form-control" id="videoUpload" name="video" accept="video/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary">رفع الفيديو</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 نظام كاميرا المراقبة | تم التصميم بواسطة فريق Morgan</p>
+    </footer>
+</body>
+</html>
